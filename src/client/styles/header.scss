@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    margin-top: 10px;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 1em;
+      list-style: lower-greek;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: black;
+
+      &:hover{
+          color: rgb(250, 252, 249);
+      }
+
+      }
+    }

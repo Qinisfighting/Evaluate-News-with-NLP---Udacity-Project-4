@@ -1,7 +1,19 @@
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { checkForURL } from './js/urlChecker'
+import { checkForPolarity } from './js/polarityChecker'
 
-console.log(checkForName);
 
-alert("I EXIST")
-console.log("CHANGE!!");
+import './styles/resets.scss'
+import './styles/base.scss'
+import './styles/form.scss'
+import './styles/footer.scss'
+import './styles/header.scss'
+
+
+export {
+    handleSubmit,
+    checkForURL,
+    checkForPolarity
+   }
+
+

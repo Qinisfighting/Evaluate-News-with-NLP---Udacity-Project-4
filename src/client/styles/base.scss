@@ -1,0 +1,36 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(238, 184, 184);
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font: 100% $font-stack;
+    background-color: $primary-color;
+    font-size: 1.3em;
+    padding: auto;
+
+}
+
+main {
+    flex: 2;
+    
+
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: left
+    
+    
+}
+
+h1 {
+    max-width: 800px;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(54, 54, 54)
+    
+}
