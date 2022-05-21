@@ -1,7 +1,4 @@
 
-import { checkForPolarity } from "./polarityChecker"
-import { checkForURL } from "./urlChecker"
-
 //get Value of the input for URL
 let formURL = document.getElementById('url').value
 
@@ -12,7 +9,7 @@ form.addEventListener('submit', handleSubmit)
 //call function by event listener
 function handleSubmit(event) {
     event.preventDefault(); 
-
+    
 // check if the input  is a valid URL
 
 if (Client.checkForURL(formURL) !== true) {
@@ -35,14 +32,37 @@ if (Client.checkForURL(formURL) !== true) {
 
         postData('http://localhost:8082/api', {url: formURL})
         .then(function(res) {
-            document.getElementById('polarity').innerHTML = 'Polarity: '+checkForPolarity(res.score_tag);
+            //document.getElementById('polarity').innerHTML = 'Polarity: '+ checkForPolarity(res.score_tag);
             document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`;
             document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
             document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
             document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
         })
 
-        export { handleSubmit }
-        export { checkForPolarity }
-        export { checkForURL }
+        /*const checkForPolarity = (score) => {
+            let display;
+            switch (score){
+                case 'P+':
+                    display = 'strong positive';
+                    break;
+                case 'P':
+                    display = 'positive';
+                    break;
+                case 'NEW':
+                    display = 'neutral';
+                    break;
+                case 'N':
+                    display = 'negative';
+                    break;
+                case 'N+':
+                    display = 'strong negative';
+                    break;
+                case 'NONE':
+                    display = 'no sentiment';
+            }
+            return display;
+        } */
+
+        export { handleSubmit } 
+              
 

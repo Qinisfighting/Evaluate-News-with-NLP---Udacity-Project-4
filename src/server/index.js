@@ -38,7 +38,6 @@ const baseURL = 'https://api.meaningcloud.com/sentiment-2.1'
 const API_KEY = process.env.API_KEY
 console.log(`Your API Key is ${process.env.API_KEY}`);
 
-//let input = []
 
 // Fetch Data from API
 getAPI = async function (url = "") {
@@ -51,11 +50,8 @@ getAPI = async function (url = "") {
     }
   }; 
 
-
 // Send it to the client
-
 app.post('/api', async function(req, res) {
-    //input = req.body.url;
     const apiURL = `${baseURL}key=${API_KEY}&url=${req.body.url}&lang=en`
     const newData = await getAPI(apiURL)
     console.log(newData)
@@ -63,11 +59,30 @@ app.post('/api', async function(req, res) {
   });
 
 
-// designates what port the app will listen to for incoming requests
-/*app.listen(8080, function () {
-    console.log('App listening on port 8080!')
-}) */
+/*Boiler template
+const formdata = new FormData();
+formdata.append("key", "YOUR API KEY");
+formdata.append("txt", "YOUR TEXT HERE");
+formdata.append("lang", "TEXT LANGUAGE HERE");  // 2-letter code, like en es fr ...
 
+const requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+const response = fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
+  .then(response => ({
+    status: response.status, 
+    body: response.json()
+  }))
+  .then(({ status, body }) => console.log(status, body))
+  .catch(error => console.log('error', error));
+ */
+
+
+
+// designates what port the app will listen to for incoming requests
 app.listen(8082, function () {
     console.log('App listening on port 8082!')
 })
