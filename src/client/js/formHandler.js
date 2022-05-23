@@ -31,6 +31,18 @@ if (Client.checkForURL(formURL) !== true) {
   };
 
 
+  
+  postData('http://localhost:8082/api', {url: formURL})
+  .then(function(res) {
+      document.getElementById('polarity').innerHTML = 'Polarity: '+ checkForPolarity(res.score_tag);
+      document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`;
+      document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
+      document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
+      document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
+  })
+
+
+
   const checkForPolarity = (score) => {
     let display;
     switch (score){
@@ -56,18 +68,5 @@ if (Client.checkForURL(formURL) !== true) {
 }
 
 
-
-        postData('http://localhost:8082/api', {url: formURL})
-        .then(function(res) {
-            document.getElementById('polarity').innerHTML = 'Polarity: '+ checkForPolarity(res.score_tag);
-            document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`;
-            document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
-            document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
-            document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
-        })
-
-
-        
-        export { handleSubmit } 
+export { handleSubmit } 
               
-

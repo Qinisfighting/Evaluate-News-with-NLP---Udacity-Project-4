@@ -15,7 +15,6 @@ const app = express();
 const bodyParser = require('body-parser')
 
 /* Middleware*/
-//Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -58,6 +57,13 @@ app.post('/api', async function(req, res) {
     res.send(newData);
   });
 
+  app.listen(8082, function () {
+    console.log('App listening on port 8082!')
+})
+
+
+
+
 
 /*Boiler template
 const formdata = new FormData();
@@ -83,8 +89,4 @@ const response = fetch("https://api.meaningcloud.com/sentiment-2.1", requestOpti
 
 
 // designates what port the app will listen to for incoming requests
-app.listen(8082, function () {
-    console.log('App listening on port 8082!')
-})
-
 
