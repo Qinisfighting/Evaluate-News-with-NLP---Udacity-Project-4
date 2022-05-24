@@ -51,7 +51,7 @@ getAPI = async function (url = "") {
 
 // Send it to the client
 app.post('/api', async function(req, res) {
-    const apiURL = `${baseURL}key=${API_KEY}&url=${req.body.url}&lang=en`
+    const apiURL = `${baseURL}?key=${API_KEY}&url=${req.body.url}&lang=en`
     const newData = await getAPI(apiURL)
     console.log(newData)
     res.send(newData);
