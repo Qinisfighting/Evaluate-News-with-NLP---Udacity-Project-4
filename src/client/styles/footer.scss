@@ -1,8 +1,18 @@
 footer {
-    background-color: rgba(0, 0, 0, 0.952);
-    padding: 15px 15px 15px 15px;
-    text-align: center;
-    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.959);
+    text-align:center; 
+    color: white;
+    height: auto;
+    padding: 10px;
+
+  .socializer { 
     font-weight: bold;
+    padding-bottom: 0;
+  }
+  .copyright {
+    font-size: small;
+    text-align:right;
+    padding-top: 0;
+  }
   }
 
