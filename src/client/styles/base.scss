@@ -9,7 +9,7 @@ body {
     font: 100% $font-stack;
     background-color: $primary-color;
     font-size: 1.3em;
-    padding: auto;
+    font-weight: 530 ;
 
 }
 
@@ -31,6 +31,7 @@ h1 {
     max-width: 800px;
     text-align: center;
     font-size: 2em;
-    color: rgb(54, 54, 54)
+    color: rgb(54, 54, 54);
+    padding: top 0;
     
 }
