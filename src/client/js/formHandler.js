@@ -6,10 +6,10 @@ let formURL = document.getElementById('url').value
 const form = document.getElementById('form')
 form.addEventListener('submit', handleSubmit)
 
+
+//call function by event listener
 function handleSubmit(event) {
   event.preventDefault()
-
-  
 
 
 // check if the input  is a valid URL
@@ -33,7 +33,6 @@ if (Client.checkForURL(formURL) !== true) {
   };
 
 
-
   
   postData('http://localhost:8082/api', {url: formURL})
   .then(function(res) {
@@ -43,7 +42,6 @@ if (Client.checkForURL(formURL) !== true) {
       document.getElementById("confidence").innerHTML = `Confidence: ${res.confidence}`;
       document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
   })
-
 
 
   const checkForPolarity = (score) => {
@@ -69,9 +67,6 @@ if (Client.checkForURL(formURL) !== true) {
     }
     return display;
 }
-
-//call function by event listener
-
 
 
 
