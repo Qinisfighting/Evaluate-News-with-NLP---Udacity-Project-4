@@ -6,6 +6,19 @@ let formURL = document.getElementById('url').value
 const form = document.getElementById('form')
 form.addEventListener('submit', handleSubmit)
 
+function handleSubmit(event) {
+  event.preventDefault()
+
+  
+
+
+// check if the input  is a valid URL
+if (Client.checkForURL(formURL) !== true) {
+
+  alert('Ops, URL seems invalid...');
+  return;
+}
+}
 
     const postData = async (url = "", data = {}) => {
     const response = await fetch(url, {
@@ -58,17 +71,8 @@ form.addEventListener('submit', handleSubmit)
 }
 
 //call function by event listener
-function handleSubmit(event) {
-    event.preventDefault()
 
-    
-// check if the input  is a valid URL
-if (Client.checkForURL(formURL) !== true) {
 
-    alert('Ops, URL seems invalid...');
-    return;
-}
-}
 
 
 export { handleSubmit } 
