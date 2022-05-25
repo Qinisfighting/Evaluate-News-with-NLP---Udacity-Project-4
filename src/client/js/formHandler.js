@@ -14,7 +14,6 @@ function handleSubmit(event) {
 
 // check if the input  is a valid URL
 if (Client.checkForURL(formURL) !== true) {
-
   alert('Ops, URL seems invalid...');
   return;
 }

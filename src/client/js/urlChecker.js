@@ -1,8 +1,8 @@
 
 //https://www.codegrepper.com/code-examples/javascript/javascript+validate+url
 
-
-/*function checkForURL(formURL){
+/*
+function checkForURL(formURL){
   let regex = formURL.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
   return(regex !== null) 
 }
