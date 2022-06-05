@@ -25,7 +25,7 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('dist'))
 
-
+// Get Route
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
     //res.sendFile(path.resolve('src/client/views/index.html'))
@@ -43,7 +43,6 @@ let formInput = []
 app.post('/api', async function(req, res) {
     //GET the url from the request body
     formInput = req.body.url
-    console.log(`You entered: ${formInput}`);
     //Build the URL
     const apiURL = `${baseURL}?key=${API_KEY}&url=${req.body.url}&lang=en`
     //Fetch Data from API
@@ -60,29 +59,6 @@ app.listen(8082, (error) => {
 })
 
 
-
-
-
-/*Boiler template
-const formdata = new FormData();
-formdata.append("key", "YOUR API KEY");
-formdata.append("txt", "YOUR TEXT HERE");
-formdata.append("lang", "TEXT LANGUAGE HERE");  // 2-letter code, like en es fr ...
-
-const requestOptions = {
-  method: 'POST',
-  body: formdata,
-  redirect: 'follow'
-};
-
-const response = fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
-  .then(response => ({
-    status: response.status, 
-    body: response.json()
-  }))
-  .then(({ status, body }) => console.log(status, body))
-  .catch(error => console.log('error', error));
- */
 
 
 

@@ -1,5 +1,7 @@
 import { handleSubmit } from './js/formHandler'
 import { checkForURL } from './js/urlChecker'
+import { checkForPolarity } from './js/polarityChecker'
+
 import logo from './img/logo.png'
 
 import './styles/resets.scss'
@@ -15,6 +17,7 @@ homeImg.src = logo;
 export {
     handleSubmit,
     checkForURL,
+    checkForPolarity
     }
 
 

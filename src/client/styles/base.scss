@@ -22,9 +22,10 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
-    text-align: left
-    
-    
+    text-align: left; 
+ #text {
+    font-style: italic;
+ }
 }
 
 h1 {
@@ -32,6 +33,8 @@ h1 {
     text-align: center;
     font-size: 2em;
     color: rgb(54, 54, 54);
-    padding: top 0;
-    
+    padding: top 0;   
 }
+
+
+

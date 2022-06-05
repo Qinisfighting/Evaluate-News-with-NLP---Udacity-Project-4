@@ -1,3 +1,5 @@
+import { checkForPolarity } from './polarityChecker'
+
 //add event listener for the form
 const form = document.getElementById('form')
 form.addEventListener('submit', handleSubmit)
@@ -14,6 +16,7 @@ if (Client.checkForURL(formURL)) {
 
   postData('http://localhost:8082/api', {url: formURL})
   .then(function(res) {
+      document.getElementById('text').innerHTML = `${res.text}`;
       document.getElementById('polarity').innerHTML = 'Polarity: '+ checkForPolarity(res.score_tag);
       document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`;
       document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
@@ -43,34 +46,6 @@ if (Client.checkForURL(formURL)) {
       console.log('error', error);
   }
 };
-
-
-  
- 
-
-  const checkForPolarity = (score) => {
-    let display;
-    switch (score){
-        case 'P+':
-            display = 'strong positive';
-            break;
-        case 'P':
-            display = 'positive';
-            break;
-        case 'NEW':
-            display = 'neutral';
-            break;
-        case 'N':
-            display = 'negative';
-            break;
-        case 'N+':
-            display = 'strong negative';
-            break;
-        case 'NONE':
-            display = 'no sentiment';
-    }
-    return display;
-}
 
 
 
