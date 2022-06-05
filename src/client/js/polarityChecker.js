@@ -1,25 +1,28 @@
-  function checkForPolarity(score){
-    let display;
-    switch (score){
+  //https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/doc/response#score_tag
+  
+  
+  function checkForPolarity(scoreTag){
+    let show;
+    switch (scoreTag){
         case 'P+':
-            display = 'strong positive';
+            show = 'strong positive';
             break;
         case 'P':
-            display = 'positive';
+            show = 'positive';
             break;
         case 'NEW':
-            display = 'neutral';
+            show = 'neutral';
             break;
         case 'N':
-            display = 'negative';
+            show = 'negative';
             break;
         case 'N+':
-            display = 'strong negative';
+            show = 'strong negative';
             break;
         case 'NONE':
-            display = 'no sentiment';
+            show = 'sentiment not found';
     }
-    return display.toUpperCase();
+    return show.toUpperCase();
 }
 
 export {checkForPolarity}

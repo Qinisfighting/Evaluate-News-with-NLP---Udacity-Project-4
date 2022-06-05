@@ -16,7 +16,7 @@ if (Client.checkForURL(formURL)) {
 
   postData('http://localhost:8082/api', {url: formURL})
   .then(function(res) {
-      document.getElementById('text').innerHTML = `${res.text}`;
+      document.getElementById('text').innerHTML = `"...${res.sentence_list[2].text}..."`;
       document.getElementById('polarity').innerHTML = 'Polarity: '+ checkForPolarity(res.score_tag);
       document.getElementById("agreement").innerHTML = `Agreement: ${res.agreement}`;
       document.getElementById("subjectivity").innerHTML = `Subjectivity: ${res.subjectivity}`;
