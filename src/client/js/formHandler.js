@@ -50,4 +50,4 @@ if (Client.checkForURL(formURL)) {
 
 
 export { handleSubmit } 
-//export { polarityChecker }              
+            
