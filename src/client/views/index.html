@@ -3,79 +3,92 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Sentiment Analysis</title>
-        <!--<link rel="stylesheet" href="/styles/resets.css">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sentiment Analysis</title>
+  <!--<link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
         <link rel="stylesheet" href="/styles/form.css">
         <link rel="stylesheet" href="/styles/footer.css"> -->
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <header>
+  <header>
 
-            <div class="">
-                <div style='display:inline-block;padding-left:25px;padding-top: 25px;'>
-                    <img id="logo" height='170px' width='170px' /> 
-                </div>
-            </div>
-            <div class="">
-                <nav class="menu">
-                    <ul>
-                      <li><a href="#">Startseite</a></li>
-                      <li><a href="#">Über</a></li>
-                      <li><a href="#">Kontakt</a></li>
-                    </ul>
-                  </nav>
-            </div>
-        </header>
+    <div class="">
+      <div style='display:inline-block;padding-left:25px;padding-top: 25px;'>
+        <img id="logo" height='170px' width='170px' />
+      </div>
+    </div>
+    <div class="">
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Startseite</a></li>
+          <li><a href="#">Über</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <main>
-            <section>
+  <main>
+    <section>
 
-                <div class="">
-                    <h1>Sentiment Analysis</h1>
-                </div>
-                <br>
-                <br>
-                <form id="form" class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="url" type="text" name="input" value="" onblur="Client.handleSubmit(event)" placeholder="Enter URL">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            </section>
+      <div class="">
+        <h1>Sentiment Analysis</h1>
+      </div>
+      <br>
+      <br>
+      <form id="form" class="" onsubmit="return Client.handleSubmit(event)">
+        <input id="url" type="text" name="input" value="" onblur="Client.handleSubmit(event)" placeholder="Enter URL">
+        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+      </form>
+    </section>
 
-            <section>
-                <div id="text"></div>
-                <br>
-                <div id="polarity"></div>
-                <div id="agreement"></div>
-                <div id="subjectivity"></div>
-                <div id="confidence"></div>
-                <div id="irony"></div>  
-            </section>
-        </main>
+    <section>
+      <div id="text"></div>
+      <br>
+      <div id="polarity"></div>
+      <div id="agreement"></div>
+      <div id="subjectivity"></div>
+      <div id="confidence"></div>
+      <div id="irony"></div>
+    </section>
+  </main>
 
-        <footer>
-            
-            <div class="socializer a sr-32px sr-opacity sr-icon-grey sr-bg-none sr-pad">
-                <span class="sr-facebook sr-text-in">
-                    <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F&amp;t=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web" target="_blank" title="Facebook">
-                        <i class="fab fa-facebook-f"></i><span class="text">Facebook</span></a></span>
-                <span class="sr-twitter sr-text-in">
-                    <a href="https://twitter.com/intent/tweet?text=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web%20-%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F%20" target="_blank" title="Twitter">
-                        <i class="fab fa-twitter"></i><span class="text">Twitter</span></a></span>
-                <span class="sr-email sr-text-in">
-                    <a href="mailto:?subject=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web&amp;body=%20-%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F" target="_blank" title="Email">
-                        <i class="fa fa-envelope"></i><span class="text">Email</span></a></span>
-                <span class="sr-whatsapp sr-text-in">
-                    <a href="https://api.whatsapp.com/send?text=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F" target="_blank" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i><span class="text">WhatsApp</span></a></span>
-               
-        
-        </footer>
+  <footer>
 
-    </body>
+    <div class="socializer a sr-32px sr-opacity sr-icon-grey sr-bg-none sr-pad">
+      <span class="sr-facebook sr-text-in">
+        <a href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F&amp;t=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web" target="_blank" title="Facebook">
+          <i class="fab fa-facebook-f"></i><span class="text">Facebook</span></a></span>
+      <span class="sr-twitter sr-text-in">
+        <a href="https://twitter.com/intent/tweet?text=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web%20-%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F%20" target="_blank" title="Twitter">
+          <i class="fab fa-twitter"></i><span class="text">Twitter</span></a></span>
+      <span class="sr-email sr-text-in">
+        <a href="mailto:?subject=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web&amp;body=%20-%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F" target="_blank" title="Email">
+          <i class="fa fa-envelope"></i><span class="text">Email</span></a></span>
+      <span class="sr-whatsapp sr-text-in">
+        <a href="https://api.whatsapp.com/send?text=Free%20Social%20Media%20Share%20Buttons%20Generator%20-%20Aakash%20Web%20https%3A%2F%2Fwww.aakashweb.com%2Fapps%2Fsocial-buttons-generator%2F" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i><span class="text">WhatsApp</span></a></span>
+
+  </footer>
+  
+    
+   <script>
+    // when in the development phase this script needs to be commented to avoid dev-server error 
+    // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+    </script> 
+
+</body>
+
 </html>
