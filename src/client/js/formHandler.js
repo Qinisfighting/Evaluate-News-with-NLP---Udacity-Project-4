@@ -40,7 +40,7 @@ function handleSubmit(event) {
     ) {
       document.getElementById(
         "text"
-      ).innerHTML = `"...${res.sentence_list[6].text}${res.sentence_list[7].text}.."`;
+      ).textContent = `"...${res.sentence_list[6].text}${res.sentence_list[7].text}.."`;
       document.getElementById("polarity").innerHTML =
         "Polarity: " + checkForPolarity(res.score_tag);
       document.getElementById(
@@ -60,5 +60,6 @@ function handleSubmit(event) {
   }
 }
 console.log("::: Form Submitted :::");
+
 
 export { handleSubmit };

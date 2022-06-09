@@ -9,7 +9,7 @@ function checkForPolarity(scoreTag) {
       case "P":
         msg = "POSITIVE";
         break;
-      case "NEW":
+      case "NEU":
         msg = "NEUTRAL";
         break;
       case "N":
