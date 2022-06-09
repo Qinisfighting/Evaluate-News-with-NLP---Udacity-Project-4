@@ -41,7 +41,7 @@ The fourth Project of Front End Web Developer Nanodegree Program from Udacity, a
 
 ## Installation 
 
-- make sure Node and npm are installed from the terminal, and run
+- make sure Node(v14.0.0) and npm(v6.14.4) are installed from the terminal, and run
 
    ```
    npm install
