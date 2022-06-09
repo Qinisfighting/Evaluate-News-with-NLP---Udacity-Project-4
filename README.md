@@ -63,7 +63,7 @@ Command | Action
 ## View the project
 
 - [local](http://localhost:8082/)
-- [Netlify](hhttps://Sentiment-Analysis-Qin.netlify.app)
+- [Netlify](https://Sentiment-Analysis-Qin.netlify.app)
   
 
 
