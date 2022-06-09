@@ -1,4 +1,4 @@
-# Texts Sentiment Analysis
+# Sentiment Analysis with NLP
 
 
 ## Overview
@@ -54,6 +54,18 @@ The fourth Project of Front End Web Developer Nanodegree Program from Udacity, a
    ```
     
 ## Start the project
+
+-  Sign up for an API key at meaningcloud.com
+-  Install the dotenv package
+```
+npm install dotenv
+```
+- Create a .env file in the root of this Project
+- Fill the .env file with the API keys 
+```
+API_KEY=**************************
+```
+- and
 
 Command | Action
 :------------: | :-------------:
