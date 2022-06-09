@@ -11,12 +11,12 @@ This is the fourth Project of Front End Web Developer Nanodegree Program from Ud
 
 ## Demo
 
-![Texts Sentiment Analysis]<img src="https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/src/client/img/Demo.gif" width="800" height="400"> 
+<img src="https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/src/client/img/Demo.gif" width="800" height="500"> 
 
 ## References and Sourses
 
-    - [Udacity evaluate-news-nlp starter code](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
-    - [Sentiment Analysis API from meaningcloud](https://www.meaningcloud.com/products/sentiment-analysis)
+- [Udacity evaluate-news-nlp starter code](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
+- [Sentiment Analysis API from meaningcloud](https://www.meaningcloud.com/products/sentiment-analysis)
 
 ## Environment
 
@@ -41,14 +41,12 @@ This is the fourth Project of Front End Web Developer Nanodegree Program from Ud
 
 ## Installation 
 
-- make sure Node and npm are installed from the terminal, and run
+make sure Node and npm are installed from the terminal, and run
   
-   ```
    npm install
 
-- by package compatibility issues, please install pluins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/package.json), and run
+by package compatibility issues, please install plugins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/package.json), and run
 
-   ``` 
    npm i --legacy-peer-deps
     
 ## Start the project
