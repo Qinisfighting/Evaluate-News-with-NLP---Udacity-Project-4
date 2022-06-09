@@ -7,7 +7,7 @@
 concerned with the interactions between computers and human (natural) languages, in particular how to program computers to
 process and analyze large amounts of natural language data.
 
-This is the fourth Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool to evaluate News with NLP, which allows user to submit a URL of an article and receive a sentiment analysis result of the article back.
+The fourth Project of Front End Web Developer Nanodegree Program from Udacity, aiming to create a web tool to evaluate News with NLP, which allows user to submit a URL of an article and receive a sentiment analysis of the article as a result back.
 
 ## Demo
 
@@ -63,7 +63,7 @@ Command | Action
 ## View the project
 
 - [local](http://localhost:8082/)
-- [Netlify](https://www.netlify.com/)
+- [Netlify](hhttps://Sentiment-Analysis-Qin.netlify.app)
   
 
 
