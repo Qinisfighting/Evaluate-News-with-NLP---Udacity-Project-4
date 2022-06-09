@@ -41,12 +41,11 @@ This is the fourth Project of Front End Web Developer Nanodegree Program from Ud
 
 ## Installation 
 
-make sure Node and npm are installed from the terminal, and run
+- make sure Node and npm are installed from the terminal, and run
    ```
    npm install
 
-by package compatibility issues, please install plugins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/package.json), and run
-
+- by package compatibility issues, please install plugins and loaders with the proposed version set from [package.json](https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/package.json), and run
    ```
    npm i --legacy-peer-deps
     
