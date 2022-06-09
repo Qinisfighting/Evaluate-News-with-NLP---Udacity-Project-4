@@ -11,7 +11,7 @@ This is the fourth Project of Front End Web Developer Nanodegree Program from Ud
 
 ## Demo
 
-<img src="https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/src/client/img/Demo.gif" width="800" height="500"> 
+<img src="https://github.com/Qinisfighting/Evaluate-News-with-NLP---Udacity-Project-4/blob/main/src/client/img/Demo.gif" width="800"> 
 
 ## References and Sourses
 
