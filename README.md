@@ -55,13 +55,8 @@ The fourth Project of Front End Web Developer Nanodegree Program from Udacity, a
     
 ## Start the project
 
--  Sign up for an API key at meaningcloud.com
--  Install the dotenv package
-```
-npm install dotenv
-```
-- Create a .env file in the root of this Project
-- Fill the .env file with the API keys 
+- Sign up for an API key at meaningcloud.com and make sure dotenv package is installed
+- Create a .env file in the root of this Project and fill the file with the API keys 
 ```
 API_KEY=**************************
 ```
