@@ -8,21 +8,24 @@ body {
     min-height: 100vh;
     font: 100% $font-stack;
     background-color: $primary-color;
-    font-size: 1.3em;
-    font-weight: 530 ;
-
+    font-size: 1.2em;
+    font-weight: 500 ;
+    
 }
 
 main {
     flex: 2;
-    
+    padding-bottom: 30px; 
 
 }
 
 section {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 30px auto;
+    margin-top: 0;
     text-align: left; 
+    padding: 5px;
+   
  #text {
     font-style: italic;
  }
@@ -31,9 +34,10 @@ section {
 h1 {
     max-width: 800px;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     color: rgb(54, 54, 54);
-    padding: top 0;   
+    padding-top: 110px; 
+    padding-left: 70px;  
 }
 
 
