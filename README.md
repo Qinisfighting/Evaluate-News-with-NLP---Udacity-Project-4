@@ -64,8 +64,8 @@ API_KEY=**************************
 
 Command | Action
 :------------: | :-------------:
-`npm run build-prod` | Build project
-`npm start` | Run project
+`npm run build-prod` | `npm start`
+Build project | Run project
 
 ## View the project
 
