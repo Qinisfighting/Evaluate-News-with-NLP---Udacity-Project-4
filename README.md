@@ -60,9 +60,9 @@ The fourth Project of Front End Web Developer Nanodegree Program from Udacity, a
 ```
 API_KEY=**************************
 ```
-- run
+- To build, run  
  `npm run build-prod` 
-- and then
+- To start, run
  `npm start`
 
 
