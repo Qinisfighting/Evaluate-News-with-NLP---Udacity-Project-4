@@ -62,8 +62,8 @@ API_KEY=**************************
 ```
 - and run the commands below:
 
-`npm run build-prod` 
-`npm start`
+ -`npm run build-prod` 
+ -`npm start`
 
 
 ## View the project
