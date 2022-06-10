@@ -1,4 +1,10 @@
-import { checkForPolarity } from "./polarityChecker";
+import { checkForPolarity } from "./allChecker";
+import { checkForAgreement } from "./allChecker";
+import { checkForSubjectivity } from "./allChecker";
+import { checkForIrony } from "./allChecker";
+
+
+
 
 //call function by event listener
 function handleSubmit(event) {
@@ -9,57 +15,63 @@ function handleSubmit(event) {
   form.addEventListener("submit", handleSubmit);
 
   //get Value of the input for URL
-  let formURL = document.getElementById("url").value;
+  let userURL = document.getElementById("url").value;
+
+  //check if the input  is a valid URL
+  if (!Client.checkForURL(userURL)) {
+    alert("Ops, URL seems invalid...!");
+    return;
+  }
+
 
   // Function to POST data
-  const postData = async (url = "", data = {}) => {
+  // Reference 1: https://www.codegrepper.com/code-examples/javascript/js+new+promise+fetch+post+data
+  // Reference 2: the "//Function to POST data" code block from last project of my own: https://github.com/Qinisfighting/Weather-Journal-App---Udacity-Project-3/blob/main/website/app.js
+  async function postData(url = '', data = {}) {
     const response = await fetch(url, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      credentials: "same-origin", // include, *same-origin, omit
+      method: "POST",
+      mode: 'cors', 
+      cache: 'no-cache', 
+      credentials: "same-origin",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      body: JSON.stringify(data)
     });
-    try {
-      // Transform into JSON
-      const allData = await response.json();
-      // console.log(allData)
-      return allData;
-    } catch (error) {
-      console.log("error", error);
-      // appropriately handle the error
-    }
+    return response;
   };
 
-  //check if the input  is a valid URL
-  if (Client.checkForURL(formURL)) {
-    // when the URL is valid, send it to the backend and write updated data to DOM elements
-    postData("http://localhost:8082/api", { url: formURL }).then(function (
-      res
-    ) {
-      document.getElementById(
-        "text"
-      ).textContent = `"...${res.sentence_list[6].text}${res.sentence_list[7].text}.."`;
-      document.getElementById("polarity").innerHTML =
+// Reference: https://www.codegrepper.com/code-examples/javascript/js+new+promise+fetch+post+data
+ postData("http://localhost:8082/api", { url: userURL })
+
+    .then((res) => res.json())
+    .then(( res ) => {
+     console.log(res);
+    // using textContent instead of innerHTML to avoid text with Hyperlink displays as Hyperlink content
+      document.querySelector(
+        "#text"
+      ).textContent = "..." + res.sentence_list[6].text + res.sentence_list[7].text + "..";
+      document.querySelector(
+        "#polarity").textContent =
         "Polarity: " + checkForPolarity(res.score_tag);
-      document.getElementById(
-        "agreement"
-      ).innerHTML = `Agreement: ${res.agreement}`;
-      document.getElementById(
-        "subjectivity"
-      ).innerHTML = `Subjectivity: ${res.subjectivity}`;
-      document.getElementById(
-        "confidence"
-      ).innerHTML = `Confidence: ${res.confidence}`;
-      document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
+      document.querySelector(
+        "#agreement"
+      ).textContent = "Agreement:" + checkForAgreement(res.agreement);
+      document.querySelector(
+        "#subjectivity"
+      ).textContent = "Subjectivity:" + checkForSubjectivity(res.subjectivity);
+      document.querySelector(
+        "#confidence"
+      ).textContent = "Confidence:" + res.confidence + " - The value represents the confidence associated with the sentiment analysis performed on the text, it is an integer number in the 0-100 range.";
+      document.querySelector(
+        "#irony").textContent = "Irony:" + checkForIrony(res.irony);
     });
-    // when the URL is not valid, show a alert
-  } else {
-    alert("Ops, URL seems invalid...");
+
+    
+
   }
-}
+ 
+  
+
 console.log("::: Form Submitted :::");
-
-
 export { handleSubmit };

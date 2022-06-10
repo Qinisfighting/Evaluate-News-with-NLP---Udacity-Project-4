@@ -7,6 +7,7 @@ function checkForURL(string) {
   );
   return regex !== null;
 }
+console.log("::: URL validated :::");
 
 export { checkForURL };
-console.log("::: URL validated :::");
+
