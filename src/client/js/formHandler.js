@@ -11,11 +11,11 @@ function handleSubmit(event) {
   event.preventDefault();
 
   //add event listener for the form
-  const form = document.getElementById("form");
+  const form = document.querySelector("#form");
   form.addEventListener("submit", handleSubmit);
 
   //get Value of the input for URL
-  let userURL = document.getElementById("url").value;
+  let userURL = document.querySelector("#url").value;
 
   //check if the input  is a valid URL
   if (!Client.checkForURL(userURL)) {

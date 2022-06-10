@@ -39,7 +39,6 @@ console.log(`Your API Key is ${process.env.API_KEY}`);
 
 // Function to GET Web API Data
 // Reference: the "//Function to GET Web API Data" code block from last project of my own: https://github.com/Qinisfighting/Weather-Journal-App---Udacity-Project-3/blob/main/website/app.js
-
 const getAPI = async (url = "") => {
   const request = await fetch(url);
   
@@ -64,7 +63,6 @@ app.listen(8082, (error) => {
   if (error) throw new Error(error);
   console.log("App listening on port 8082!");
 });
-
 
 
 
