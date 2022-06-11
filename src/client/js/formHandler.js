@@ -16,7 +16,7 @@ function handleSubmit(event) {
 
   //check if the input  is a valid URL
   if (!Client.checkForURL(userURL)) {
-    alert("Ops, URL seems invalid...!");
+    alert("Oops, URL seems invalid...!");
     return;
   }
 
@@ -58,7 +58,7 @@ function handleSubmit(event) {
       document.querySelector("#irony").textContent =
         "Irony:" + checkForIrony(res.irony);
     })
-    .catch(error => window.alert ("Oops! Is your server disconnected? Or forget to put an API key?"))
+    .catch(error => window.alert ("Oops! Is your server disconnected? Or lack of an API key?"))
     
 }
 
