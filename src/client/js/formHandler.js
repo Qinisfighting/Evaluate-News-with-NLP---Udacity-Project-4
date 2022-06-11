@@ -22,10 +22,8 @@ function handleSubmit(event) {
     document.querySelector("#loading").classList.replace("hidden","showing");
     setTimeout(function(){
     document.querySelector("#loading").classList.replace("showing","hidden");
-      //document.querySelector("#showLoading").classList.remove("hidden");
- }, 2000);
+  }, 2000);
     
-
   }
 
   // Function to POST data
