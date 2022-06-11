@@ -41,14 +41,14 @@
 
   <main>
     <section>
-
-    
       <br>
       <br>
       <form id="form" class="" onsubmit="return Client.handleSubmit(event)">
         <input id="url" type="text" name="input" value="" onblur="Client.handleSubmit(event)" placeholder="Enter URL">
         <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
       </form>
+      <br>
+      <div id="loading" class="hidden"> loading... </div> 
     </section>
 
     <section>
@@ -79,7 +79,7 @@
 
   </footer>
     
-   <!-- 
+   <!--  -->  
    <script>
     // when in the development phase this script is preferred to be commented to avoid dev-server error 
     // Check that service workers are supported
@@ -90,7 +90,7 @@
         });
     }
     </script> 
-    -->  
+   
 </body>
 
 </html>

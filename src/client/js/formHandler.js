@@ -18,11 +18,19 @@ function handleSubmit(event) {
   if (!Client.checkForURL(userURL)) {
     alert("Oops, URL seems invalid...!");
     return;
+  } else {
+    document.querySelector("#loading").classList.replace("hidden","showing");
+    setTimeout(function(){
+    document.querySelector("#loading").classList.replace("showing","hidden");
+      //document.querySelector("#showLoading").classList.remove("hidden");
+ }, 2000);
+    
+
   }
 
   // Function to POST data
-  // Reference 1: https://www.codegrepper.com/code-examples/javascript/js+new+promise+fetch+post+data
-  // Reference 2: the "//Function to POST data" code block from last project of my own: https://github.com/Qinisfighting/Weather-Journal-App---Udacity-Project-3/blob/main/website/app.js
+  // Reference 1: the "//Function to POST data" code block from last project of my own: https://github.com/Qinisfighting/Weather-Journal-App---Udacity-Project-3/blob/main/website/app.js
+  // Reference 2: https://stackoverflow.com/questions/54163952/async-await-in-fetch-how-to-handle-errors
   async function postData(url = "", data = {}) {
     const response = await fetch(url, {
       method: "POST",
@@ -34,6 +42,9 @@ function handleSubmit(event) {
       },
       body: JSON.stringify(data)
     });
+    if (response.status >= 400 && response.status < 600) {
+      throw new Error("Bad response from server");
+    }
     return response;
   }
 
@@ -44,7 +55,7 @@ function handleSubmit(event) {
       console.log(res);
       // using textContent instead of innerHTML to avoid text with Hyperlink displays as Hyperlink content
       document.querySelector("#text").textContent =
-        "..." + res.sentence_list[6].text + res.sentence_list[7].text + "..";
+        "..." + res.sentence_list[6].text + res.sentence_list[7].text + "...";
       document.querySelector("#polarity").textContent =
         "Polarity: " + checkForPolarity(res.score_tag);
       document.querySelector("#agreement").textContent =
@@ -58,9 +69,10 @@ function handleSubmit(event) {
       document.querySelector("#irony").textContent =
         "Irony:" + checkForIrony(res.irony);
     })
-    .catch(error => window.alert ("Oops! Is your server disconnected? Or lack of an API key?"))
-    
+    .catch(error => window.alert ("Oops! Is your server disconnected? Or lack of an API key?")) 
+     
 }
 
 console.log("::: Form Submitted :::");
+
 export { handleSubmit };

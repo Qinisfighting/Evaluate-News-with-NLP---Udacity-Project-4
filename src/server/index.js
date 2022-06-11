@@ -50,13 +50,17 @@ const getAPI = async (url = "") => {
 };
 
 app.post("/api", async (req, res) => {
-  //Build the URL
+//Build the URL
   const apiURL = `${baseURL}?key=${API_KEY}&url=${req.body.url}&lang=en`;
   const allData = await getAPI(apiURL);
+  try {
   res.send(allData);
+  }catch (error) {
+    console.log("error", error);
+  }
 });
 
-// designates what port the app will listen to for incoming requests
+//designates what port the app will listen to for incoming requests
 app.listen(8082, (error) => {
   if (error) throw new Error(error);
   console.log("App listening on port 8082!");

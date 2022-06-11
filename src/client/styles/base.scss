@@ -15,7 +15,7 @@ body {
 
 main {
     flex: 2;
-    padding-bottom: 30px; 
+    padding-bottom: 50px; 
 
 }
 
@@ -25,11 +25,25 @@ section {
     margin-top: 0;
     text-align: left; 
     padding: 5px;
-   
- #text {
-    font-style: italic;
+      
+     #text {
+      font-style: italic;
+     }
+
+     #loading {
+        text-align: center;
+        font-size: larger;
+     }
+
+     .showing {
+        display:block;
+     }
+
+     .hidden {
+        display:none;
+     }
+
  }
-}
 
 h1 {
     max-width: 800px;
