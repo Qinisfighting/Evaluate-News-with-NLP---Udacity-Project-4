@@ -55,6 +55,7 @@ app.post("/api", async (req, res) => {
   const allData = await getAPI(apiURL);
   try {
   res.send(allData);
+  console.log(allData);
   }catch (error) {
     console.log("error", error);
   }
