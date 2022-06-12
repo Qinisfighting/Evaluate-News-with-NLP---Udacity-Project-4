@@ -14,7 +14,7 @@ function handleSubmit(event) {
   //get Value of the input for URL
   let userURL = document.querySelector("#url").value;
 
-  //check if the input  is a valid URL
+    //check if the input  is a valid URL
   if (!Client.checkForURL(userURL)) {
     alert("Oops, URL seems invalid...!");
     return;
@@ -22,9 +22,10 @@ function handleSubmit(event) {
     document.querySelector("#loading").classList.replace("hidden","showing");
     setTimeout(function(){
     document.querySelector("#loading").classList.replace("showing","hidden");
-  }, 2000);
+  }, 1700);
     
   }
+
 
   // Function to POST data
   // Reference 1: the "//Function to POST data" code block from last project of my own: https://github.com/Qinisfighting/Weather-Journal-App---Udacity-Project-3/blob/main/website/app.js
