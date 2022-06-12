@@ -29,11 +29,24 @@ section {
      #text {
       font-style: italic;
      }
-
+ //https://www.w3schools.com/howto/howto_css_loader.asp
      #loading {
-        text-align: center;
-        font-size: larger;
+        border: 16px solid rgba(247, 247, 166, 0.685);  
+        border-top: 16px solid #96d7eb; 
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 2s linear infinite;
+        position: fixed;
+        left: 47%;
+        top: 40%;
+        z-index: 1;
      }
+
+     @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
 
      .showing {
         display:block;
